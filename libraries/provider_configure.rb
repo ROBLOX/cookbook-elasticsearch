@@ -89,6 +89,7 @@ class ElasticsearchCookbook::ConfigureProvider < Chef::Provider::LWRPBase
     params[:MAX_LOCKED_MEMORY] = new_resource.memlock_limit
     params[:MAX_MAP_COUNT] = new_resource.max_map_count
     params[:ES_JVM_OPTIONS] = "#{new_resource.path_conf}/jvm.options"
+    params[:ES_PATH_CONF] = new_resource.path_conf
 
     default_config_name = es_svc.service_name || es_svc.instance_name || new_resource.instance_name || 'elasticsearch'
 
