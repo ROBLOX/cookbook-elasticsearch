@@ -17,7 +17,7 @@ WorkingDirectory=<%= @path_home %>
 User=<%= @es_user %>
 Group=<%= @es_group %>
 
-ExecStartPre=<%= @path_home %>/bin/elasticsearch-systemd-pre-exec
+#ExecStartPre=<%= @path_home %>/bin/elasticsearch-systemd-pre-exec
 
 ExecStart=<%= @path_home %>/bin/elasticsearch \
                                                 -p ${PID_DIR}/elasticsearch.pid \
